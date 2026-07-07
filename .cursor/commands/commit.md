@@ -33,9 +33,10 @@ Create a git commit after explicit user approval. No push unless explicitly requ
 ## Done Criteria
 
 - Commit created with user approval
-- Remind user: push and run cloudrabbit tests when CI is configured (only push if asked)
+- Remind user: push when ready; CI on the PR must be green before merge (only push if asked)
 
 ## Rules
 
 - Follow user git safety rules: no force push, no config changes, no push unless asked
 - Never commit `.env` or credential files
+- Follow `engineering-guardrails.mdc` and `github-workflow.mdc`

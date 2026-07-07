@@ -1,0 +1,28 @@
+name: Release assets
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stub:
+    name: Release assets stub
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Customize this workflow
+        run: |
+          echo "Release assets workflow is a stub."
+          echo "Customize .github/workflows/release-assets.yml to build and upload your artifacts."
+          echo "Triggered for tag: ${GITHUB_REF_NAME}"
+
+      # Example extension points:
+      # - Build matrix for binaries (Go, Rust, Node CLI, etc.)
+      # - Upload to GitHub Release with softprops/action-gh-release
+      # - Attach checksums / SBOM

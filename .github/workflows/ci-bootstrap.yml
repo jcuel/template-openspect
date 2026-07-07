@@ -1,0 +1,24 @@
+name: CI bootstrap
+
+on:
+  push:
+    branches: [main, master, dev]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  bootstrap:
+    name: Bootstrap — repo check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify repository scaffold
+        run: |
+          test -f openspec/config.yaml
+          test -f CONTRIBUTING.md
+          test -f SECURITY.md
+          test -f CODE_OF_CONDUCT.md
+          echo "Bootstrap check passed."

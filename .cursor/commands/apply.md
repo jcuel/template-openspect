@@ -14,7 +14,7 @@ Execute the implementation loop for `openspec/changes/<change-name>/`.
 ## Prerequisites
 
 - `proposal.md`, `design.md`, `tasks.md`, and delta `specs/<domain>/spec.md` must exist
-- Resolve `<domain>` from `openspec/config.yaml`
+- Domain from `openspec/config.yaml` (`domain` field)
 - If missing, stop and tell the user to run `/propose <change-name>` first
 
 ## Inputs
@@ -25,18 +25,19 @@ Execute the implementation loop for `openspec/changes/<change-name>/`.
 ## Steps
 
 1. Create feature branch `feat/<change-name>` (or switch if it already exists).
-2. Read `tasks.md` and implement the next unchecked item.
-3. Write or update code with minimal, focused diffs.
-4. Add or update tests for the change.
-5. Update relevant documentation.
-6. Create or update `testing-report.md` (initial test results).
-7. If scope shifted during implementation, update `proposal.md` (set status to `in-progress`).
-8. Check off completed items in `tasks.md`.
-9. Ask whether to continue the implement loop or proceed to `/verify <change-name>`.
+2. Confirm a **GitHub Issue** exists for this change; move project Status to **In progress**; comment with branch name (see `github-workflow.mdc`).
+3. Read `tasks.md` and implement the next unchecked item.
+4. Write or update code with minimal, focused diffs.
+5. Add or update tests for the change.
+6. Update relevant documentation.
+7. Create or update `testing-report.md` (initial test results).
+8. If scope shifted during implementation, update `proposal.md` (set status to `in-progress`).
+9. Check off completed items in `tasks.md`.
+10. Ask whether to continue the implement loop or proceed to `/verify <change-name>`.
 
 ## Implement Loop
 
-Repeat steps 2–8 until all tasks are checked or the user stops.
+Repeat steps 3–9 until all tasks are checked or the user stops.
 
 ## Outputs
 
@@ -52,5 +53,5 @@ Repeat steps 2–8 until all tasks are checked or the user stops.
 
 ## Rules
 
-- Follow `engineering-guardrails.mdc` and `specboot-workflow.mdc`
+- Follow `engineering-guardrails.mdc`, `specboot-workflow.mdc`, and `github-workflow.mdc`
 - Prefer containerized verification when Dockerfile exists; otherwise document the gap

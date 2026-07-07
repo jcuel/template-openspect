@@ -20,19 +20,19 @@ Create proposal artifacts under `openspec/changes/<change-name>/` from the refin
 
 - Change name from `$ARGUMENTS`
 - `user-story.md` in the change folder
-- Templates in `.cursor/templates/openspec/`
 - Domain from `openspec/config.yaml` (`domain` field)
+- Templates in `.cursor/templates/openspec/`
 
 ## Steps
 
 1. Read `user-story.md` and derive scope, design approach, and tasks.
-2. Resolve `<domain>` from `openspec/config.yaml`.
-3. Create or update:
+2. Create or update:
    - `proposal.md` (status: `draft`)
    - `design.md`
    - `tasks.md` (checkbox list aligned with implementation)
    - `specs/<domain>/spec.md` (delta spec using ADDED/MODIFIED/REMOVED blocks)
-4. Map each acceptance criterion to at least one delta requirement or task.
+3. Map each acceptance criterion to at least one delta requirement or task.
+4. **GitHub:** move linked issue to Status **Ready**; comment with links to `proposal.md` and delta spec; confirm milestone.
 
 ## Outputs
 
@@ -46,5 +46,5 @@ Create proposal artifacts under `openspec/changes/<change-name>/` from the refin
 
 ## Rules
 
-- Follow `engineering-guardrails.mdc` and `specboot-workflow.mdc`
+- Follow `engineering-guardrails.mdc`, `specboot-workflow.mdc`, and `github-workflow.mdc`
 - Keep the delta spec focused on behavior changes, not implementation details

@@ -1,0 +1,43 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Build artifacts
+dist/
+build/
+bin/
+out/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Dependencies
+node_modules/
+vendor/
+
+# Test / coverage
+coverage/
+*.log
+.trivy-pr-comment.md
+.e2e-screenshots-comment.md
+.tmp/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/

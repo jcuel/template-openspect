@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/<owner>/<repo>/security/advisories/new
+    about: Report security issues privately (do not open a public bug issue)
+  - name: OpenSpec changes
+    url: https://github.com/<owner>/<repo>/tree/dev/openspec/changes
+    about: Browse in-repo change proposals and user stories
+  - name: Contributing
+    url: https://github.com/<owner>/<repo>/blob/dev/CONTRIBUTING.md
+    about: Fork workflow, branch model, and PR guidelines

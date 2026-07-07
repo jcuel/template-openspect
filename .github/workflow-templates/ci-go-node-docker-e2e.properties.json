@@ -1,0 +1,4 @@
+{
+  "name": "CI — Go + Node + Docker + E2E + Trivy",
+  "description": "Full stack CI from SPECBOOT template (govulncheck, smoke, Cypress, Trivy). Copy from templates/pipelines/ and customize <your-project>."
+}

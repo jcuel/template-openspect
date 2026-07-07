@@ -1,0 +1,69 @@
+name: Bug report
+description: Report a defect
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        PRs for fixes should target **`dev`** (branch from `upstream/dev`). See [CONTRIBUTING.md](https://github.com/<owner>/<repo>/blob/dev/CONTRIBUTING.md).
+        Do **not** use this form for security vulnerabilities — use [Security Advisories](https://github.com/<owner>/<repo>/security/advisories/new) instead.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What went wrong?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - Docker
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: e.g. master @ abc1234 or v0.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: branch
+    attributes:
+      label: Suggested fix branch
+      description: Cut from `dev`
+      placeholder: fix/short-topic
+    validations:
+      required: true

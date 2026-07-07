@@ -1,4 +1,5 @@
-# Project configuration (optional)
+# Project configuration
+# version is the semver source of truth for release-version.yml
 project: <your-project>
 domain: <your-domain>
 version: 0.1.0

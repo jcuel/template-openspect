@@ -27,10 +27,14 @@ Run validation and record results in `testing-report.md`.
 1. Run the project test suite (or document that no runner exists yet).
 2. If `Dockerfile` or `docker-compose.yml` exists, run container smoke test.
    Otherwise note "container smoke: unavailable — no Dockerfile" in the report.
-3. Note security considerations (dependency scan, secrets, input validation) in the report.
+3. Note security considerations in the report:
+   - Dependency vulnerability scan (e.g. govulncheck, npm audit)
+   - Container/filesystem CVE scan (e.g. Trivy) when CI is configured
+   - Secrets exposure and input validation review
 4. Verify each acceptance criterion from `user-story.md`; record pass/fail.
 5. Update `testing-report.md` verify checklist and summary.
 6. Fix failures if straightforward; otherwise report blockers.
+7. **GitHub:** comment on the linked issue with verify results (pass/fail per acceptance criterion).
 
 ## Outputs
 
@@ -45,4 +49,4 @@ Run validation and record results in `testing-report.md`.
 
 ## Rules
 
-- Follow `engineering-guardrails.mdc` and `specboot-workflow.mdc`
+- Follow `engineering-guardrails.mdc`, `specboot-workflow.mdc`, and `github-workflow.mdc`
